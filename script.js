@@ -13,19 +13,19 @@ function toggleMenu () {
     nav.classList.toggle("hidden")
 }
 
-let slideIndex = 0
+let slideIndex = 2
 
 // increments slide
 function plusSlides(n) {
-    console.log(slideIndex)
     slideIndex += n
+    console.log(slideIndex)
     console.log("fired")
-    if (slideIndex > 3) {
-        slideIndex = 1
+    if (slideIndex > 2) {
+        slideIndex = 0
         showSlides(slideIndex)
         return slideIndex
-    } else if (slideIndex < 1) {
-        slideIndex = 3
+    } else if (slideIndex < 0) {
+        slideIndex = 2
         showSlides(slideIndex)
         return slideIndex
     } else {
@@ -49,7 +49,7 @@ function showSlides(n) {
             break;
     
         default:
-            main.style.transform = "translateX(0)"
+            main.style.transform = "translateX(200vw)"
             break;
     }
 }
@@ -58,5 +58,5 @@ function showSlides(n) {
 menuOpen.addEventListener("click", toggleMenu)
 menuClose.addEventListener("click", toggleMenu)
 
-next.addEventListener("click", () => {plusSlides(1)})
-last.addEventListener("click", () => {plusSlides(-1)})
+next.addEventListener("click", () => { plusSlides(1) })
+last.addEventListener("click", () => { plusSlides(-1) })

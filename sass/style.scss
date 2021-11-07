@@ -93,6 +93,7 @@ main {
     grid-template-columns: repeat(3, 100vw);
     transition: 200ms;
     overflow-x: visible;
+    transform: translateX(-200vw);
 
     .slide {
         position: relative;
@@ -103,7 +104,7 @@ main {
         }
 
         &:first-of-type .slide__img {
-            background: url("../images/mobile-image-hero-1.jpg") no-repeat center center;
+            background: url("../images/mobile-image-hero-3.jpg") no-repeat center center;
             background-size: cover;
         }
         
@@ -113,7 +114,7 @@ main {
         }
         
         &:nth-of-type(3) .slide__img {
-            background: url("../images/mobile-image-hero-3.jpg") no-repeat center center;
+            background: url("../images/mobile-image-hero-1.jpg") no-repeat center center;
             background-size: cover;
         }
 
