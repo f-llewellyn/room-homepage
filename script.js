@@ -8,18 +8,15 @@ const main = document.querySelector("main")
 const body = document.querySelector("body")
 
 // Hamburger menu toggle
-function toggleMenu () {
-    console.log("Toggled")
+function toggleMenu() {
     nav.classList.toggle("hidden")
 }
 
-let slideIndex = 2
+let slideIndex = 0
 
 // increments slide
 function plusSlides(n) {
     slideIndex += n
-    console.log(slideIndex)
-    console.log("fired")
     if (slideIndex > 2) {
         slideIndex = 0
         showSlides(slideIndex)
@@ -49,7 +46,7 @@ function showSlides(n) {
             break;
     
         default:
-            main.style.transform = "translateX(200vw)"
+            main.style.transform = "translateX(0)"
             break;
     }
 }
