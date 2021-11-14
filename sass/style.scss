@@ -264,8 +264,13 @@ section {
             }
 
             ul {
-                color: white;
+                color: $white;
                 gap: 2rem;
+
+
+                & > *:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -304,6 +309,11 @@ section {
                 h1 {
                     font-size: 42px;
                 }
+
+                a:hover {
+                    color: $d-grey;
+                    fill: $d-grey;
+                }
             }
         }
 
@@ -314,6 +324,10 @@ section {
         // width: 200px;
         top: calc(60vw * (534 / 840) - 50px);
         left: calc(60vw);
+
+        & > *:hover {
+            background: $d-grey;
+        }
     }
 
     section {
